@@ -119,7 +119,7 @@ const server = http.createServer(async (req, res) => {
         console.log(responseData);
         res.end(JSON.stringify(responseData, null, 2));
     } catch (error) {
-        res.write(`Error inside createserver: ${error.message}`);
+        res.end(`Error inside createserver: ${error.message}`);
     }
 });
 
